@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "modidsc",
+  "version": "${version}",
+
+  "name": "Example Mod Scala Edition",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://chesschicken-kz.github.io/",
+    "sources": "https://github.com/ChessChicken-KZ/ScalaModExample"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "stationapi:mod": [
+      "kz.chesschicken.example.ScalaMod"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": "1.0.0-beta.7.3"
+  }
+}
