@@ -1,5 +1,6 @@
 package kz.chesschicken.example
 
+import kz.chesschicken.example.ModListener.{exampleBlock, exampleItem}
 import net.minecraft.block.material.Material
 import net.modificationstation.stationapi.api.client.event.texture.TextureRegister
 import net.modificationstation.stationapi.api.client.texture.{TextureFactory, TextureRegistry}
@@ -11,10 +12,14 @@ import net.modificationstation.stationapi.api.common.preset.block.BlockBase
 import net.modificationstation.stationapi.api.common.preset.item.ItemBase
 import net.modificationstation.stationapi.api.common.registry.{Identifier, ModID}
 
-class ScalaListener extends Object with BlockRegister with ItemRegister with TextureRegister
+object ModListener {
+  var exampleBlock: net.minecraft.block.BlockBase = _
+
+  var exampleItem: net.minecraft.item.ItemBase = _
+}
+
+class ModListener extends Object with BlockRegister with ItemRegister with TextureRegister
 {
-  var exampleBlock: net.minecraft.block.BlockBase = null
-  var exampleItem: net.minecraft.item.ItemBase = null
 
   override def registerBlocks(blockRegistry: BlockRegistry, modID: ModID): Unit = {
     exampleBlock = new BlockBase(Identifier.of(modID, "exampleBlock"), Material.CLAY).setName("exampleBlock")
@@ -26,7 +31,10 @@ class ScalaListener extends Object with BlockRegister with ItemRegister with Tex
 
   override def registerTextures(): Unit = {
     exampleBlock.texture = TextureFactory.INSTANCE.addTexture(TextureRegistry.getRegistry("TERRAIN"), "/assets/modid/textures/calm_scala.png")
-    exampleItem.setTexturePosition(TextureFactory.INSTANCE.addTexture(TextureRegistry.getRegistry("GUI_ITEMS"), "/assets/modid/textures/calm_scala.png"))
 
+    exampleItem.setTexturePosition(TextureFactory.INSTANCE.addTexture(TextureRegistry.getRegistry("GUI_ITEMS"), "/assets/modid/textures/calm_scala.png"))
   }
+
 }
+
+

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modidsc",
+  "id": "modid",
   "version": "${version}",
 
   "name": "Example Mod Scala Edition",
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "stationapi:mod": [
-      "kz.chesschicken.example.ScalaMod"
+      "kz.chesschicken.example.ExampleMod"
     ]
   },
   "mixins": [
