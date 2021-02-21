@@ -4,7 +4,7 @@
   "package": "kz.chesschicken.example.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "JavaMixin"
+    "MixinExample"
   ],
   "server": [
   ],

@@ -12,7 +12,7 @@ buildscript {
 		}
 	}
 	dependencies {
-		classpath 'com.github.Chocohead:Fabric-Loom:bbaa5d7'
+		classpath 'com.github.Chocohead:Fabric-Loom:e3d1762'
 	}
 }
 
@@ -96,9 +96,14 @@ dependencies {
 	compile 'org.jetbrains:annotations:16.0.2'
 
 	modImplementation "com.github.minecraft-cursed-legacy:cursed-fabric-loader:${project.loader_version}"
-	modImplementation "com.github.ModificationStation:StationAPI:660082a:dev"
+
+	implementation "com.github.jhalterman:typetools:87240d6"
+	implementation "com.github.benjiman:expressions:7ed6748"
+
+	modImplementation "com.github.ModificationStation:StationAPI:${project.stapi_version}"
 
 	compile 'org.scala-lang:scala-library:2.13.4'
+
 	compile files("$sourceSets.main.scala.outputDir")
 }
 

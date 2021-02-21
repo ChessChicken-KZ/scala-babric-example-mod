@@ -11,10 +11,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  *
  */
 @Mixin(Minecraft.class)
-public class JavaMixin {
+public class MixinExample {
     @Inject(method = "init", at = @At("TAIL"))
     private void mixinByJava(CallbackInfo ci)
     {
-        System.out.println("Mixining things is cool!");
+        System.out.println("Mixing things is cool!");
     }
 }
