@@ -1,13 +1,12 @@
 package kz.chesschicken.example.events.init
 
-import net.modificationstation.stationapi.api.client.event.texture.TextureRegister
-import net.modificationstation.stationapi.api.client.texture.{TextureFactory, TextureRegistry}
-import net.modificationstation.stationapi.api.common.event.EventListener
+import net.mine_diver.unsafeevents.listener.EventListener
+import net.modificationstation.stationapi.api.client.event.texture.TextureRegisterEvent
 
 class TextureListener {
 
-  @EventListener def registerTextures(event: TextureRegister): Unit = {
-    ItemListener.coolItem.setTexturePosition(TextureFactory.INSTANCE.addTexture(TextureRegistry.getRegistry("GUI_ITEMS"), "/assets/examplemod/textures/coolItem.png"))
+  @EventListener def registerTextures(event: TextureRegisterEvent): Unit = {
+    ItemListener.coolItem.setTexture("/assets/examplemod/textures/coolItem.png")
   }
 
 }

@@ -1,9 +1,9 @@
 package kz.chesschicken.example.events.init
 
 import kz.chesschicken.example.events.init.KeyBindingListener.{keyBinding, keyBinding2, keyBinding3}
+import net.mine_diver.unsafeevents.listener.EventListener
 import net.minecraft.client.options.KeyBinding
-import net.modificationstation.stationapi.api.client.event.option.KeyBindingRegister
-import net.modificationstation.stationapi.api.common.event.EventListener
+import net.modificationstation.stationapi.api.client.event.option.KeyBindingRegisterEvent
 
 object KeyBindingListener {
 
@@ -15,7 +15,7 @@ object KeyBindingListener {
 
 class KeyBindingListener {
 
-  @EventListener def registerKeyBindings(event: KeyBindingRegister): Unit = {
+  @EventListener def registerKeyBindings(event: KeyBindingRegisterEvent): Unit = {
     val list = event.keyBindings
     keyBinding = new KeyBinding("key.examplemod.test", 21)
     keyBinding2 = new KeyBinding("key.examplemod.test2", 22)

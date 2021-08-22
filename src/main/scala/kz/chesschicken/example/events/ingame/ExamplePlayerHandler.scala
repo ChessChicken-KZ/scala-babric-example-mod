@@ -1,6 +1,7 @@
 package kz.chesschicken.example.events.ingame
 
-import net.modificationstation.stationapi.api.common.entity.player.PlayerHandler
+import net.modificationstation.stationapi.api.entity.player.PlayerHandler
+
 
 class ExamplePlayerHandler extends java.lang.Object with PlayerHandler {
 

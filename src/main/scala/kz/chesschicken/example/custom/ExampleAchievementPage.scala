@@ -2,10 +2,11 @@ package kz.chesschicken.example.custom
 
 import net.minecraft.block.BlockBase
 import net.modificationstation.stationapi.api.client.gui.screen.menu.AchievementPage
+import net.modificationstation.stationapi.api.registry.ModID
 
 import java.util.Random
 
-class ExampleAchievementPage(name: String) extends AchievementPage(name) {
+class ExampleAchievementPage(id : ModID, name: String) extends AchievementPage(id, name) {
 
   override def getBackgroundTexture(random: Random, column: Int, row: Int, randomizedRow: Int, currentTexture: Int): Int = {
     var k = BlockBase.SAND.texture

@@ -4,11 +4,11 @@ import kz.chesschicken.example.events.init.ModelListener
 import net.minecraft.block.material.Material
 import net.minecraft.level.Level
 import net.modificationstation.stationapi.api.client.model.{BlockModelProvider, CustomModel}
-import net.modificationstation.stationapi.api.common.registry.Identifier
-import net.modificationstation.stationapi.template.common.block.BlockBase
+import net.modificationstation.stationapi.api.registry.Identifier
+import net.modificationstation.stationapi.api.template.block.TemplateBlockBase
 
 
-class ExampleBlockWithModel(id: Identifier, m: Material) extends BlockBase(id, m) with BlockModelProvider {
+class ExampleBlockWithModel(id: Identifier, m: Material) extends TemplateBlockBase(id, m) with BlockModelProvider {
 
   override def isFullOpaque: Boolean = false
 
