@@ -113,7 +113,8 @@ dependencies {
 
 	modImplementation "com.github.minecraft-cursed-legacy:cursed-fabric-loader:${project.loader_version}"
 
-	modImplementation 'com.github.ModificationStation:StationAPI:8ff5fd3fd2'
+	modImplementation 'com.github.ModificationStation:StationAPI:777f95fe9d'
+
 
 	compile 'org.scala-lang:scala-library:2.13.6'
 }

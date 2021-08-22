@@ -3,17 +3,23 @@ package kz.chesschicken.example.events.init
 import kz.chesschicken.example.events.init.ModelListener.CUSTOM_MODEL
 import net.mine_diver.unsafeevents.listener.EventListener
 import net.modificationstation.stationapi.api.client.event.model.ModelRegisterEvent
-import net.modificationstation.stationapi.impl.client.model.{CustomModel, CustomModelRenderer}
+import net.modificationstation.stationapi.api.client.model.JsonModel
+import net.modificationstation.stationapi.api.mod.entrypoint.Entrypoint
+import net.modificationstation.stationapi.api.registry.{Identifier, ModID}
+import net.modificationstation.stationapi.api.util.Null
 
 object ModelListener {
 
-  var CUSTOM_MODEL: CustomModel = _
+  var CUSTOM_MODEL: JsonModel = _
 
 }
 
 class ModelListener {
+  @Entrypoint.ModID
+  var modID: ModID = Null.get()
+
   @EventListener def registerModels(event: ModelRegisterEvent): Unit = {
-    CUSTOM_MODEL = new CustomModelRenderer("/assets/examplemod/stationapi/models/model.json", "examplemod").getEntityModelBase
+    CUSTOM_MODEL = new JsonModel(Identifier.of(modID, "model"))
   }
 
 }
