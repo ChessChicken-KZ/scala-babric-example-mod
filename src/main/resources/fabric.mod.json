@@ -26,7 +26,6 @@
       "kz.chesschicken.example.events.init.RecipeListener"
     ],
     "stationapi:event_bus_client": [
-      "kz.chesschicken.example.events.init.ModelListener",
       "kz.chesschicken.example.events.init.KeyBindingListener",
       "kz.chesschicken.example.events.init.TextureListener"
     ],

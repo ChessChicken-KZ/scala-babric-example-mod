@@ -1,6 +1,6 @@
 package kz.chesschicken.example.wrappers
 
-import kz.chesschicken.example.events.init.ModelListener
+import kz.chesschicken.example.events.init.TextureListener
 import net.minecraft.block.material.Material
 import net.minecraft.level.BlockView
 import net.modificationstation.stationapi.api.client.model.{BlockInventoryModelProvider, BlockWorldModelProvider, JsonModel}
@@ -12,9 +12,9 @@ class ExampleBlockWithModel(id: Identifier, m: Material) extends TemplateBlockBa
 
   override def isFullOpaque: Boolean = false
 
-  override def getCustomWorldModel(level: BlockView, x: Int, y: Int, z: Int): JsonModel  = ModelListener.CUSTOM_MODEL
+  override def getCustomWorldModel(level: BlockView, x: Int, y: Int, z: Int): JsonModel  = TextureListener.CUSTOM_MODEL
 
-  override def getInventoryModel(i: Int): JsonModel = ModelListener.CUSTOM_MODEL
+  override def getInventoryModel(i: Int): JsonModel = TextureListener.CUSTOM_MODEL
 
 
 }
