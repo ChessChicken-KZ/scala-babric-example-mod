@@ -10,7 +10,6 @@ class RecipeListener {
 
   @EventListener def registerRecipes(event: RecipeRegisterEvent): Unit = {
 
-    //Sometimes I am acting surprisingly
     val `type` = event.recipeId
     if (`type` eq RecipeRegisterEvent.Vanilla.CRAFTING_SHAPED.`type`) CraftingRegistry.addShapedRecipe(new ItemInstance(ItemListener.coolItem, 1), "XXX", "X X", "X X", 'X', BlockBase.DIRT)
     if (`type` eq RecipeRegisterEvent.Vanilla.SMELTING.`type`) SmeltingRegistry.addSmeltingRecipe(new ItemInstance(ItemBase.apple, 1), new ItemInstance(BlockBase.WOOL))

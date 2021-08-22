@@ -116,8 +116,6 @@ dependencies {
 	modImplementation 'com.github.ModificationStation:StationAPI:8ff5fd3fd2'
 
 	compile 'org.scala-lang:scala-library:2.13.6'
-
-	compile files("$sourceSets.main.scala.outputDir")
 }
 
 processResources {

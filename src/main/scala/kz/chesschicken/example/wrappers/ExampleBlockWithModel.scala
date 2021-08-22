@@ -15,4 +15,6 @@ class ExampleBlockWithModel(id: Identifier, m: Material) extends TemplateBlockBa
   override def getCustomWorldModel(level: Level, i: Int, i1: Int, i2: Int, i3: Int): CustomModel = ModelListener.CUSTOM_MODEL
 
   override def getCustomInventoryModel(i: Int): CustomModel = ModelListener.CUSTOM_MODEL
+
+
 }
