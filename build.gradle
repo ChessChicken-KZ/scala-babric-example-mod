@@ -115,6 +115,7 @@ dependencies {
 
 	modImplementation 'com.github.ModificationStation:StationAPI:777f95fe9d'
 
+	modImplementation "com.github.ChessChicken-KZ:CursedFabricScala:a8a00c5333"
 
 	compile 'org.scala-lang:scala-library:2.13.6'
 }
