@@ -27,7 +27,8 @@
     ],
     "stationapi:event_bus_client": [
       "kz.chesschicken.example.events.init.KeyBindingListener",
-      "kz.chesschicken.example.events.init.TextureListener"
+      "kz.chesschicken.example.events.init.TextureListener",
+      "kz.chesschicken.example.events.ingame.KeyPressedListener"
     ],
     "stationapi:event_bus_server": [
       "kz.chesschicken.example.events.init.ServerInitListener"
