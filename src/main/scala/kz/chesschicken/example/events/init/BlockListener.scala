@@ -1,6 +1,6 @@
 package kz.chesschicken.example.events.init
 
-import kz.chesschicken.example.events.init.BlockListener.{exampleBlock, exampleBlock2}
+import kz.chesschicken.example.events.init.BlockListener.{exampleBlock, exampleBlock2, exampleBlock3}
 import kz.chesschicken.example.wrappers.ExampleBlockWithModel
 import net.mine_diver.unsafeevents.listener.EventListener
 import net.minecraft.block.material.Material
@@ -12,9 +12,9 @@ import net.modificationstation.stationapi.api.util.Null
 
 object BlockListener {
 
-  var exampleBlock: net.minecraft.block.BlockBase = _
-  var exampleBlock2: net.minecraft.block.BlockBase = _
-
+  var exampleBlock: TemplateBlockBase = _
+  var exampleBlock2: TemplateBlockBase = _
+  var exampleBlock3: TemplateBlockBase = _
 }
 
 class BlockListener {
@@ -25,6 +25,7 @@ class BlockListener {
     System.out.println(MOD_ID)
     exampleBlock = new TemplateBlockBase(Identifier.of(MOD_ID, "test"), Material.DIRT).setTranslationKey(MOD_ID, "test")
     exampleBlock2 = new ExampleBlockWithModel(Identifier.of(MOD_ID, "test2"), Material.DIRT).setTranslationKey(MOD_ID, "test2")
+    exampleBlock3 = new TemplateBlockBase(Identifier.of(MOD_ID, "test3"), Material.SAND).setTranslationKey(MOD_ID, "test3")
   }
 
 }
