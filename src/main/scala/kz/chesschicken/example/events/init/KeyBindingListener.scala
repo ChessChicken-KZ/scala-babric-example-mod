@@ -16,13 +16,14 @@ object KeyBindingListener {
 class KeyBindingListener {
 
   @EventListener def registerKeyBindings(event: KeyBindingRegisterEvent): Unit = {
-    val list = event.keyBindings
     keyBinding = new KeyBinding("key.examplemod.test", 21 /* Keyboard.KEY_Y */)
+    event.keyBindings.add(keyBinding)
+
     keyBinding2 = new KeyBinding("key.examplemod.test2", 22 /* Keyboard.KEY_U */)
+    event.keyBindings.add(keyBinding2)
+
     keyBinding3 = new KeyBinding("key.examplemod.hurtme", 23 /* Keyboard.KEY_I */)
-    list.add(keyBinding)
-    list.add(keyBinding2)
-    list.add(keyBinding3)
+    event.keyBindings.add(keyBinding3)
   }
 
 }

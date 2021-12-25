@@ -8,7 +8,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
  * Mixins works normally only with Java :(
- *
  */
 @Mixin(Minecraft.class)
 public class MixinExample {

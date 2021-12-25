@@ -18,7 +18,6 @@ class TextureListener {
   var modID: ModID = Null.get()
 
   @EventListener def registerTextures(event: TextureRegisterEvent): Unit = {
-    val terrain = Atlases.getStationTerrain
     ItemListener.coolItem.setTexture("/assets/examplemod/textures/item/coolItem.png")
     BlockListener.exampleBlock3.texture = Atlases.getStationTerrain.addTexture(Identifier.of(modID, "block/scotlalamsy")).index
     CUSTOM_MODEL = JsonModel.get(Identifier.of(modID, "modelExample"))
