@@ -1,5 +1,5 @@
 plugins {
-	id 'babric-loom' version '0.12-SNAPSHOT'
+	id 'babric-loom' version '0.12.9'
 	id 'maven-publish'
 	id 'scala'
 }
@@ -17,7 +17,7 @@ loom {
 
 repositories {
 	maven {
-		name = 'Forge'
+		name = 'Froge'
 		url = 'https://maven.minecraftforge.net/'
 	}
 	maven {
@@ -25,52 +25,37 @@ repositories {
 		url = 'https://maven.glass-launcher.net/babric'
 	}
 	maven {
-		name = 'Glass Releases'
-		url = 'https://maven.glass-launcher.net/releases'
-	}
-	maven {
 		name = 'Glass Snapshots'
 		url = 'https://maven.glass-launcher.net/snapshots'
 	}
 	maven {
-		name = "Jitpack"
-		url 'https://jitpack.io/'
+		name = 'Glass Releases'
+		url = 'https://maven.glass-launcher.net/releases'
+	}
+	maven {
+		name = 'Jitpack'
+		url = 'https://jitpack.io/'
 	}
 	mavenCentral()
-}
-
-sourceSets {
-	main {
-		scala {
-			outputDir = file("$buildDir/classes/scala/main")
-			srcDirs = ['src/main/scala', 'src/main/java']
-		}
-		java {
-			outputDir = file("$buildDir/classes/java/main")
-			srcDirs = []
-		}
-	}
 }
 
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.glasslauncher:bin:${project.yarn_mappings}"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation "babric:fabric-loader:${project.loader_version}"
 
 	implementation 'org.slf4j:slf4j-api:1.8.0-beta4'
 	implementation 'org.apache.logging.log4j:log4j-slf4j18-impl:2.17.2'
 
 	/* StationAPI */
-	modImplementation 'net.modificationstation:StationAPI:a6831a8'
+	modImplementation 'net.modificationstation:StationAPI:fc9e517'
 
 	/* CursedFabricScala */
-	modImplementation 'com.github.ChessChicken-KZ:CursedFabricScala:a3553540a7'
-	/* Scala Library */
-	implementation 'org.scala-lang:scala-library:2.13.8'
+	modImplementation 'com.github.ChessChicken-KZ:CursedFabricScala:0.2-3.1.3'
 
 	/* HowManyItems - NEI or TMI, but for cursed-fabric. */
 	modImplementation('com.github.calmilamsy:HowManyItems-Fabric-Unofficial:6af40ed18d') {
-		exclude group: 'com.github.ModificationStation', module: 'StationAPI'
+		transitive false
 	}
 }
 

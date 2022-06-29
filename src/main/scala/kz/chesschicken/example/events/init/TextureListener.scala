@@ -12,8 +12,6 @@ class TextureListener {
   var modID: ModID = Null.get()
 
   @EventListener def registerTextures(event: TextureRegisterEvent): Unit = {
-    ItemListener.coolItem.setTexture(Identifier.of(modID, "item/coolItem"))
-    BlockListener.exampleBlock3.texture = Atlases.getStationTerrain.addTexture(Identifier.of(modID, "block/scotlalamsy")).index
   }
 
 }
