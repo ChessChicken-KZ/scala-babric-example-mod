@@ -5,8 +5,8 @@
 		32
 	],
 	"textures": {
-		"0": "examplemod:modelTexture",
-		"particle": "examplemod:modelTexture"
+		"0": "examplemod:block/example_model_texture",
+		"particle": "examplemod:block/example_model_texture"
 	},
 	"elements": [
 		{

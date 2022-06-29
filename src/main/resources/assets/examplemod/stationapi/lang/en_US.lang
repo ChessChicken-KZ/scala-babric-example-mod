@@ -5,10 +5,10 @@ achievement.apple.desc=Pick up an apple.
 
 stationapi\:achievementPage.testPage=Test Page
 
-item.coolitem.name=Cool Item
+item.example_item.name=Cool Item
 
-tile.test.name=Example Block
-tile.test2.name=Example Block With Model
+tile.example_block.name=Example Block
+tile.example_model_block.name=Example Block With Model
 
 key.test=Give Boned Achievement
 key.test2=Give Apple Achievement

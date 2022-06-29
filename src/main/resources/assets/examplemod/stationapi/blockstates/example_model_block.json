@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "examplemod:block/example_model_block"
+    },
+    "facing=west": {
+      "model": "examplemod:block/example_model_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "examplemod:block/example_model_block",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "examplemod:block/example_model_block",
+      "y": 270
+    }
+  }
+}

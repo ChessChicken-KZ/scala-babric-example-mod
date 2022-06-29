@@ -22,8 +22,7 @@
       "kz.chesschicken.example.events.init.AchievementListener",
       "kz.chesschicken.example.events.init.BlockListener",
       "kz.chesschicken.example.events.init.ItemListener",
-      "kz.chesschicken.example.events.init.PlayerHandlerListener",
-      "kz.chesschicken.example.events.init.RecipeListener"
+      "kz.chesschicken.example.events.init.PlayerHandlerListener"
     ],
     "stationapi:event_bus_client": [
       "kz.chesschicken.example.events.init.KeyBindingListener",
